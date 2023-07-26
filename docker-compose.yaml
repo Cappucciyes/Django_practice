@@ -1,5 +1,17 @@
+# you can specify version, but it is optional
+
+# tell docker what kind of services this app has and how to build them
 services:
   web:
-    build: .
+    build: . # where can we find the Dockerfile. each service may have their own Dockerfile
+    volumes: 
+      - .:/code # /code will "sync" with file we are working in (.)
     ports:
-      - "8000:5000"
+      - "8000:8000"
+    depends_on: # db will load first before web service
+      - db
+  
+  db:
+    image: postgres:15
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"

@@ -1,5 +1,5 @@
 # Pull base image
-FROM python:3.13.3
+FROM python:3.11.3
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 COPY . . 
 
 # Run command below so when docker is running so will be our project
-CMD ["python", "maange.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
