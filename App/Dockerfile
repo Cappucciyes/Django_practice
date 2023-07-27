@@ -13,7 +13,7 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Copy project
-# Copy everything from our folder(first '.') to /code (second '.')
+# Copy everything from App folder(first '.') to /code (second '.')
 COPY . . 
 
 # Run command below so when docker is running so will be our project

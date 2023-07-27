@@ -5,7 +5,7 @@ services:
   web:
     build: . # where can we find the Dockerfile. each service may have their own Dockerfile
     volumes: 
-      - .:/code # /code will "sync" with file we are working in (.)
+      - .:/code # /code will "sync" with file we are working in (App folder)
     ports:
       - "8000:8000"
     depends_on: # db will load first before web service
