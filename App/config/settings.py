@@ -39,12 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #local apps
-    "account",
+    "accounts",
     "pages", # apps for rendering static pages
 ]
 
 # Set my custom user model as default
-AUTH_USER_MODEL = "account.CustomUser"
+AUTH_USER_MODEL = "accounts.CustomUser"
+
+# Redirect to home after logging in and logging out
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,10 +130,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles' # where we will store actual production staticfiles. Django will fill this folder up with static files we developed
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

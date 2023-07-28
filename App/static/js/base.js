@@ -1,0 +1,1 @@
+console.log("javascript test, this script should be loaded int _base")
