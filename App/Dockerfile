@@ -1,5 +1,10 @@
 # Pull base image
-FROM python:3.11.3
+FROM python:latest
+
+# Install Node.js
+RUN apt-get update && apt-get install -y curl
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+RUN apt-get install -y nodejs
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -10,7 +15,7 @@ WORKDIR /code
 
 # Install dependencies
 COPY requirements.txt requirements.txt 
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy project
 # Copy everything from App folder(first '.') to /code (second '.')

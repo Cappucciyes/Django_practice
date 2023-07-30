@@ -134,7 +134,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles' # where we will store actual production staticfiles. Django will fill this folder up with static files we developed
+STATIC_ROOT = BASE_DIR / 'staticfiles' # where we will store actual production staticfiles. Django will fill this folder up with static files we developed if we run "python manage.py collectstatic"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

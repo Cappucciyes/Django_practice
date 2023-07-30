@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 
 <html>
@@ -9,7 +10,7 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     </head>
     <body>
-        <div class="container">
+        <div class="container hover:bg-red-400">
             {% block content %}
             {% endblock content %}
         </div>
