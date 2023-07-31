@@ -1,0 +1,7 @@
+{
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showSuggestionsAsSnippets": false
+}

@@ -10,3 +10,5 @@ lerna-debug.log*
 .pnpm-debug.log*
 
 App/node_modules/
+
+env/
