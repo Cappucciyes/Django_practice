@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #local apps
     "accounts",
     "pages", # apps for rendering static pages
+    "schedule", # apps for managing schedules
 ]
 
 # Set my custom user model as default

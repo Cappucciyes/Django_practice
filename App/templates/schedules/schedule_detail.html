@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block title %}Schedule Details{% endblock title %}
+
+{% block content %}
+    <ul>
+        <li>
+            <p>Title : {{ schedule.title }}</p>
+        </li>
+
+        <li>
+            <p>Title : {{ schedule.owner.username }}</p>
+        </li>
+
+        <li>
+            <p>Title : {{ schedule.what }}</p>
+        </li>
+
+        <li>
+            <p>Title : {{ schedule.when }}</p>
+        </li>
+    </ul>
+{% endblock content %}

@@ -3,5 +3,5 @@ from .views import HomePageView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
-    path()
+    path('schedule', HomePageView.as_view(), name='home'), # RUD of schedules
 ]

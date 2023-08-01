@@ -12,3 +12,6 @@ lerna-debug.log*
 App/node_modules/
 
 env/
+
+# django
+__pycache__

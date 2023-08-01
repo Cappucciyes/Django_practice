@@ -25,6 +25,7 @@ urlpatterns = [
     # local apps
     path('', include('pages.urls')),
     path('accounts/', include('accounts.urls')),
+    path('schedule/', include('schedule.urls')),
 
     # default apps
     path('accounts/', include('django.contrib.auth.urls')), # urls for logging in and logging out

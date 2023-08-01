@@ -1,9 +1,10 @@
 import uuid
 from django.db import models
 from accounts.models import CustomUser
+from django.urls import reverse
 
 # Create your models here.
-class Schedule(models.Models):
+class Schedule(models.Model):
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
@@ -21,3 +22,7 @@ class Schedule(models.Models):
     what = models.TextField()
 
     when = models.DateTimeField()
+
+    def get_absolute_url(self):
+        return reverse("schedule_detail", kwargs={"pk": self.pk})
+    

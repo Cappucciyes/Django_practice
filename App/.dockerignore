@@ -1,3 +1,2 @@
 # folders/files in this file will not be copied over to the container
-.env
 *.docx
