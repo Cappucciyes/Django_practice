@@ -23,6 +23,9 @@ class Schedule(models.Model):
 
     when = models.DateTimeField()
 
+    time_created = models.DateTimeField()
+    time_edited = models.DateTimeField(blank=True, null=True)
+
     def get_absolute_url(self):
         return reverse("schedule_detail", kwargs={"pk": self.pk})
     

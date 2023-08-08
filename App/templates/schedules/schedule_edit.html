@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+{% block title %}Edit Schedule{% endblock title %}
+
+{% block content %}
+    <div class="w-full flex justify-center items-center">
+        <form method="post" class="w-1/3 flex flex-col items-center">
+            {% csrf_token %}
+            
+            <div><p>Title : {{ form.title }}</p></div>
+            
+            <div class="flex flex-row items-center">
+                <p class="inline-block px-1"> What:   </p>
+                {{ form.what }}
+            </div>
+            
+            <div><p>When: {{ form.when }}</p></div>
+
+            <button type="submit" class="bg-transparent hover:bg-blue-500 
+            text-blue-700 font-semibold hover:text-white py-2 px-4 border 
+            border-blue-500 hover:border-transparent rounded">Edit</button>
+        </form>
+    </div>
+    
+{% endblock content %}

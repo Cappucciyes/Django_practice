@@ -7,7 +7,13 @@
 {% block content %}
     <h1 class="bg-blue-200">Homepage</h1>
     {% if user.is_authenticated %}
-        
+        <div class="flex flex-row justify-between items-center w-full">
+            {% for schedule in user_schedule %}
+                <div class="inline-block bg-red-400">
+                    <a href="{% url 'schedule_detail' pk=schedule.id%}" class="text-white">Link to schedule {{schedule.title}}</a>
+                </div>
+            {% endfor %}
+        </div>
     {% else %}
         <div class="flex flex-col">
             <div class="box-border">
